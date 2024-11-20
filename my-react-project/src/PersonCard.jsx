@@ -10,6 +10,10 @@ const PersonCard = () => {
         experience: "5 лет"
     };
 
+    const handleClick = () => {
+        setMessage('Сообщение: Вы нажали кнопку!');
+    };
+
     return (
         <div>
             <h2>{person.name}</h2>
@@ -18,7 +22,7 @@ const PersonCard = () => {
             <p>Возраст: {person.age}</p>
             <p>Город: {person.city}</p>
             <p>Опыт: {person.experience}</p>
-            <button>Кнопка</button>
+            <button onClick={handleClick}>Кнопка</button>
         </div>
     );
 };
