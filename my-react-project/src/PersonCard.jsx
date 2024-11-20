@@ -1,6 +1,8 @@
 import React from 'react';
 
 const PersonCard = () => {
+    const [message, setMessage] = useState('');
+    const [position, setPosition] = useState('Менеджер');
     const person = {
         name: "Айдар Айдар",
         position: "Менеджер",
@@ -32,6 +34,7 @@ const PersonCard = () => {
             <p>Возраст: {person.age}</p>
             <p>Город: {person.city}</p>
             <p>Опыт: {person.experience}</p>
+            {message && <p>{message}</p>}
             <button onClick={handleClick}>Повысить в должности</button>
         </div>
     );
