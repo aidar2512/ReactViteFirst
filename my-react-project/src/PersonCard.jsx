@@ -11,7 +11,17 @@ const PersonCard = () => {
     };
 
     const handleClick = () => {
-        setMessage('Сообщение: Вы нажали кнопку!');
+        setMessage('Сообщение: Должность изменена!');
+        
+        setPosition((prevPosition) => {
+            if (prevPosition === 'Менеджер') {
+                return 'Старший менеджер'; 
+            } else if (prevPosition === 'Старший менеджер') {
+                return 'Директор'; 
+            } else {
+                return prevPosition; 
+            }
+        });
     };
 
     return (
