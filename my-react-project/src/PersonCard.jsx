@@ -18,6 +18,7 @@ const PersonCard = () => {
             <p>Возраст: {person.age}</p>
             <p>Город: {person.city}</p>
             <p>Опыт: {person.experience}</p>
+            <button>Кнопка</button>
         </div>
     );
 };
