@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import styles from './PersonCard.module.css'; 
 
 const PersonCard = () => {
     const [message, setMessage] = useState('');
@@ -27,15 +28,15 @@ const PersonCard = () => {
     };
 
     return (
-        <div>
-            <h2>{person.name}</h2>
-            <p>Должность: {person.position}</p>
+        <div className={styles.card}>  {}
+            <h2 className={styles.name}>{person.name}</h2>
+            <p>Должность: {position}</p>
             <p>Компания: {person.company}</p>
             <p>Возраст: {person.age}</p>
             <p>Город: {person.city}</p>
             <p>Опыт: {person.experience}</p>
             {message && <p>{message}</p>}
-            <button onClick={handleClick}>Повысить в должности</button>
+            <button className={styles.button} onClick={handleClick}>Повысить в должности</button>
         </div>
     );
 };
